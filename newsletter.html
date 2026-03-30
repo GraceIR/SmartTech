@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Newsletter Signup</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0a0f2c, #1a1f3d);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Dot-grid overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: 0;
+    }
+
+    .newsletter {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      padding: 2rem;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #00bcd4;
+      color: #ffff;
+      font-weight: bold;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    h1 span {
+      color: #00bcd4;
+    }
+
+    p.subtext {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    form {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 0.8rem;
+    }
+
+    input[type="email"] {
+      padding: 0.7rem;
+      border: none;
+      border-radius: 4px;
+      flex: 1;
+      max-width: 300px;
+    }
+
+    button {
+      background: #00bcd4;
+      color: #ffff;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .perks {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .perk {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .success-message {
+      display: none;
+      color: #ffeb3b;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="newsletter">
+    <div class="tag">NEWSLETTER</div>
+    <h1>Stay Ahead of the Digital <span>Curve</span>.</h1>
+    <p class="subtext">
+      Get weekly tips on digital skills, health tech insights, business growth strategies and exclusive course offers — straight to your inbox.
+    </p>
+    <form id="newsletterForm">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe Free →</button>
+    </form>
+    <div class="note">No spam. Unsubscribe anytime. We respect your inbox.</div>
+    <div class="perks">
+      <div class="perk">✓ Weekly digital tips</div>
+      <div class="perk">✓ Health tech updates</div>
+      <div class="perk">✓ Exclusive course discounts</div>
+      <div class="perk">✓ Free resources</div>
+    </div>
+    <div class="success-message" id="successMessage">Thank you for subscribing!</div>
+  </div>
+
+  
+    
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+  
+ 
