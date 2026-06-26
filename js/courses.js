@@ -1,5 +1,4 @@
- // COURSES DATA (as per brief)
-  const coursesData = [
+ const coursesData = [
     {
       id: 1,
       title: "AI School — Use AI Like a Pro",
@@ -115,7 +114,7 @@
             ${bulletItems}
           </ul>
           <button class="enroll-btn" data-name="${course.title}" data-price="${course.priceFormatted}" data-id="${course.id}">
-            📘 Enrol Now — Pay to Access
+            📘 Enrol Now
           </button>
         </div>
       </div>

@@ -1,9 +1,9 @@
 (function() {
-    // ========== HEALTH TECH COURSES ==========
+    
     const healthTechCourses = [
         {
             id: 1,
-            title: "🤖 How to Use AI as a Doctor",
+            title: " How to Use AI as a Doctor",
             category: "AI for Doctors",
             badgeClass: "badge-cyan",
             priceRaw: 15000,
@@ -12,11 +12,11 @@
             features: ["Medical prompt engineering", "AI tools for clinicians", "Practical case studies"],
             featured: false,
             buttonClass: "enroll-btn",
-            buttonText: "Enrol — Pay to Access →"
+            buttonText: "Enrol →"
         },
         {
             id: 2,
-            title: "🗺️ The Ultimate Health Tech Roadmap 2026",
+            title: " The Ultimate Health Tech Roadmap 2026",
             category: "Most Popular",
             badgeClass: "badge-yellow",
             priceRaw: 20000,
@@ -25,24 +25,24 @@
             features: ["Career transition roadmap", "Health tech roles explained", "Personalised pathway guide"],
             featured: true,
             buttonClass: "enroll-btn yellow-tint",
-            buttonText: "Enrol — Pay to Access →"
+            buttonText: "Enrol →"
         },
         {
             id: 3,
-            title: "🏥 The Impact of Technology on Healthcare",
+            title: " The Impact of Technology on Healthcare",
             category: "Healthcare Insight",
             badgeClass: "badge-cyan",
             priceRaw: 12000,
             priceFormatted: "₦12,000",
-            description: "Understand how technology is reshaping medicine — telemedicine, AI diagnostics, digital health platforms. Essential for every forward-thinking healthcare professional.",
+            description: "Understand how technology is reshaping medicine, telemedicine, AI diagnostics, digital health platforms. Essential for every forward-thinking healthcare professional.",
             features: ["Digital health landscape", "Telemedicine & AI in medicine", "Future of healthcare tech"],
             featured: false,
             buttonClass: "enroll-btn",
-            buttonText: "Enrol — Pay to Access →"
+            buttonText: "Enrol →"
         }
     ];
 
-    // Helper to generate card HTML
+    
     function generateCardHTML(course) {
         const featuredClass = course.featured ? "featured" : "";
         const featuresList = course.features.map(f => `<li>${f}</li>`).join('');
