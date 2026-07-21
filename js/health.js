@@ -6,8 +6,8 @@
             title: " How to Use AI as a Doctor",
             category: "AI for Doctors",
             badgeClass: "badge-cyan",
-            priceRaw: 15000,
-            priceFormatted: "₦15,000",
+            priceRaw: 9.38,
+            priceFormatted: "$9.38",
             description: "A practical guide to prompt engineering for healthcare professionals. AI tools to enhance clinical workflow, research, and patient communication.",
             features: ["Medical prompt engineering", "AI tools for clinicians", "Practical case studies"],
             featured: false,
@@ -16,13 +16,13 @@
         },
         {
             id: 2,
-            title: " The Ultimate Health Tech Roadmap 2026",
+            title: "Healthcare Data Analysis",
             category: "Most Popular",
             badgeClass: "badge-yellow",
-            priceRaw: 20000,
-            priceFormatted: "₦20,000",
-            description: "A step-by-step guide for healthcare professionals ready to transition into health technology. Know where to start, what to learn, and how to position yourself.",
-            features: ["Career transition roadmap", "Health tech roles explained", "Personalised pathway guide"],
+            priceRaw: 35,
+            priceFormatted: "$35",
+            description: "Master healthcare data analysis, visualization, and interpretation. Learn to transform raw medical data into actionable insights using industry-standard tools.",
+            features: ["Healthcare Data Fundamentals", "Data Visualization", "Medical Statistics", "Electronic Health Records (EHR) Analysis", "Data-Driven Decision Making"],
             featured: true,
             buttonClass: "enroll-btn yellow-tint",
             buttonText: "Enrol →"
@@ -32,8 +32,8 @@
             title: " The Impact of Technology on Healthcare",
             category: "Healthcare Insight",
             badgeClass: "badge-cyan",
-            priceRaw: 12000,
-            priceFormatted: "₦12,000",
+            priceRaw: 7.50,
+            priceFormatted: "$7.50",
             description: "Understand how technology is reshaping medicine, telemedicine, AI diagnostics, digital health platforms. Essential for every forward-thinking healthcare professional.",
             features: ["Digital health landscape", "Telemedicine & AI in medicine", "Future of healthcare tech"],
             featured: false,
@@ -54,7 +54,7 @@
                     </div>
                     <h3 class="course-title">${course.title}</h3>
                     <p class="description">${course.description}</p>
-                    <div class="price">${course.priceFormatted} <span>NGN</span></div>
+                    <div class="price">${course.priceFormatted} <span></span></div>
                     <ul class="feature-list">
                         ${featuresList}
                     </ul>

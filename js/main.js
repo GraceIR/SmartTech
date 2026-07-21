@@ -201,7 +201,7 @@
             });
         });
         
-        // Provide console feedback (optional, can be removed in production)
+        
         console.log(`Active navigation initialized. Current page: ${currentFile}`);
     })();
 
@@ -215,7 +215,7 @@
 
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      // NOTE FOR DEVELOPER: Connect this to Mailchimp, ConvertKit, or chosen platform
+     
       successMessage.style.display = 'block';
       form.reset();
     });
@@ -233,7 +233,7 @@
       e.preventDefault();
       closeModal('consultationModal');
       showToast('Request Received! Our team will reach out within 24 hours.');
-      // NOTE FOR DEVELOPER: Send email notification to client, optionally connect to CRM
+     
     });
 
     // Enrolment form
@@ -252,5 +252,4 @@
     }
  
 
-  
-  
+ 

@@ -369,3 +369,1114 @@
     </body>
 
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | SmartTech Solutions</title>
+    <meta name="description" content="Real stories from our graduates and clients">
+    <meta name="robots" content="index, follow">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/image1.png">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Video Card Styles */
+        .video-testimonial-card {
+            transition: all 0.3s ease;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #eef2ff;
+            background: #ffffff;
+        }
+
+        .video-testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+            border-color: #1A7EB6;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-testimonial-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .video-testimonial-card .card-body h5 {
+            color: #1A7EB6;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .video-testimonial-card .card-body .role {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-testimonial-card .card-body .review-text {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+
+        .video-testimonial-card .card-body .stars {
+            color: #f59e0b;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Written Testimonial Card */
+        .written-testimonial-card {
+            transition: all 0.3s ease;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #eef2ff;
+            background: #ffffff;
+        }
+
+        .written-testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+            border-color: #1A7EB6;
+        }
+
+        .written-testimonial-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .written-testimonial-card .card-body .quote-icon {
+            color: #1A7EB6;
+            font-size: 2rem;
+            opacity: 0.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .written-testimonial-card .card-body .review-text {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .written-testimonial-card .card-body .author {
+            margin-top: 1rem;
+            border-top: 1px solid #eef2ff;
+            padding-top: 1rem;
+        }
+
+        .written-testimonial-card .card-body .author h5 {
+            color: #1A7EB6;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .written-testimonial-card .card-body .author .role {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Section Headers */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0 2rem;
+        }
+
+        .section-divider .line {
+            flex: 1;
+            max-width: 100px;
+            height: 2px;
+            background: #1A7EB6;
+            opacity: 0.3;
+        }
+
+        .section-divider h4 {
+            color: #1A7EB6;
+            font-weight: 700;
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        /* Tab Navigation */
+        .testimonial-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .testimonial-tabs .tab-btn {
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            border: 2px solid #1A7EB6;
+            background: transparent;
+            color: #1A7EB6;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .testimonial-tabs .tab-btn:hover {
+            background: #1A7EB6;
+            color: white;
+        }
+
+        .testimonial-tabs .tab-btn.active {
+            background: #1A7EB6;
+            color: white;
+        }
+
+        .testimonial-tabs .tab-btn i {
+            margin-right: 8px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Admin Button - Hidden by default, show when logged in */
+        .admin-actions {
+            display: none;
+        }
+
+        .admin-actions.show {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .video-testimonial-card .card-body {
+                padding: 1rem;
+            }
+
+            .video-testimonial-card .card-body h5 {
+                font-size: 1.1rem;
+            }
+
+            .written-testimonial-card .card-body {
+                padding: 1rem;
+            }
+
+            .section-divider h4 {
+                font-size: 1.1rem;
+            }
+
+            .section-divider .line {
+                max-width: 40px;
+            }
+
+            .testimonial-tabs .tab-btn {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 d-none d-md-flex" style="background-color:#141010 !important;">
+        <div class="container">
+            <div class="d-flex justify-content-between topbar">
+                <div class="top-info">
+                    <small class="me-3 text-white-50"><a href="smarttechsolutions.trainings@gmail.com"><i class="fas fa-envelope me-2"></i></a> smarttechsolutions.trainings@gmail.com</small>
+                </div>
+                <div id="note" class="d-none d-xl-flex"><small>Empowering Businesses with Smart Tech Solutions & Professional Training</small></div>
+                <div class="top-link">
+                    <a href="https://www.facebook.com/share/1MxezwJJPA/" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/smarttech__st?igsh=MTdrZnNtMTl6d2czZg==" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/smart-tech-solutions-and-trainings/" class="bg-light nav-fill btn btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-dark" style="background-color: #10334D !important;">
+        <div class="container">
+            <nav class="navbar navbar-dark navbar-expand-lg py-0">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="img/Pi7_Tool_image1-removebg-preview.png" alt="Company Logo" style="height: 100px; width: auto;" class="me-2">
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto mx-xl-auto p-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="courses.html" class="nav-item nav-link">Courses</a>
+                        <a href="health.html" class="nav-item nav-link">Health Tech</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="testimonial.html" class="nav-item nav-link active">Testimonials</a>
+                    </div>
+                </div>
+                <div class="d-none d-xl-flex flex-shirink-0">
+                    <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
+                        <a href="" class="position-relative animated tada infinite">
+                            <i class="fa fa-phone-alt text-white fa-2x"></i>
+                            <div class="position-absolute" style="top: -7px; left: 20px;">
+                                <span><i class="fa fa-comment-dots" style="color: #1A7EB6"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="d-flex flex-column pe-4 border-end">
+                        <span class="text-white-50">Whatsapp Us</span>
+                        <span class="" style="color: #F4F2E1">Whatsapp: +2348167068421</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center ms-4">
+                        <a href="#"><i class="bi bi-search text-white fa-2x"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-white mb-4 animated slideInDown">Testimonials</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Testimonials</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- ====== TESTIMONIALS SECTION ====== -->
+    <div class="container-fluid py-5" style="background: #f8faff;">
+        <div class="container py-4">
+
+            <!-- Section Header -->
+            <div class="text-center mx-auto pb-4 wow fadeIn" data-wow-delay=".3s" style="max-width: 700px;">
+                <h5 class="text-primary">What Our Graduates Say</h5>
+                <h1 style="font-weight: 700; color: #10334D;">Real Stories, Real Transformation</h1>
+                <p style="color: #555; font-size: 1.1rem;">Read or watch testimonials from people who have transformed their careers with us.</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="testimonial-tabs wow fadeIn" data-wow-delay=".4s">
+                <button class="tab-btn active" data-tab="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="tab-btn" data-tab="video">
+                    <i class="fas fa-video"></i> Video
+                </button>
+                <button class="tab-btn" data-tab="written">
+                    <i class="fas fa-quote-left"></i> Written
+                </button>
+            </div>
+
+            <!-- ====== ALL TESTIMONIALS TAB ====== -->
+            <div class="tab-content active" id="tab-all">
+
+                <!-- Video Testimonials Row -->
+                <h4 class="mb-4" style="color: #1A7EB6; font-weight: 700;">
+                    <i class="fas fa-video me-2"></i> Video Testimonials
+                </h4>
+                <div class="row g-4 mb-5">
+
+                    <!-- Video 1 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Adaeze M.</h5>
+                                <p class="role">Freelancer · AI School Graduate</p>
+                                <p class="review-text">"The AI School completely changed how I work. I now use AI to create content, write emails, and automate client onboarding."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Tunde O.</h5>
+                                <p class="role">Social Media Manager · Lagos</p>
+                                <p class="review-text">"I landed my first paying client before the course even ended. Dr. Blessing genuinely cares about your success."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Fatima K.</h5>
+                                <p class="role">Virtual Assistant · Kano</p>
+                                <p class="review-text">"Within 2 months of completing the course, I had 3 clients and was earning consistently from home."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Chioma E.</h5>
+                                <p class="role">Small Business Owner · Abuja</p>
+                                <p class="review-text">"My sales have doubled in 3 months since applying what I learned. Worth every naira."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 5 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Samuel I.</h5>
+                                <p class="role">Video Editor · Port Harcourt</p>
+                                <p class="review-text">"I now edit brand videos professionally and charge what I'm worth. Smart Tech gave me a real skill, not just theory."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 6 - Submit Your Own -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="video-testimonial-card" style="border: 2px dashed #1A7EB6; background: #f8faff;">
+                            <div class="card-body text-center" style="padding: 3rem 1.5rem;">
+                                <div style="font-size: 3rem; margin-bottom: 1rem;">
+                                    <i class="fas fa-video" style="color: #1A7EB6; opacity: 0.5;"></i>
+                                </div>
+                                <h5 style="color: #1A7EB6;">Your Story Here</h5>
+                                <p style="color: #999;">Share your success story with us</p>
+                                <a href="#" class="btn btn-primary rounded-pill px-4 py-2" style="background: #1A7EB6; border-color: #1A7EB6; font-size: 0.85rem;">
+                                    <i class="fas fa-plus-circle me-2"></i> Submit a Testimonial
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Divider -->
+                <div class="section-divider wow fadeIn" data-wow-delay=".3s">
+                    <span class="line"></span>
+                    <h4><i class="fas fa-quote-left me-2"></i> Written Testimonials</h4>
+                    <span class="line"></span>
+                </div>
+
+                <!-- Written Testimonials Row -->
+                <div class="row g-4">
+
+                    <!-- Written 1 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"The AI School completely changed how I work. I now use AI to create content, write emails, and even automate my client onboarding. I went from zero AI knowledge to offering it as a service to clients within 6 weeks."</p>
+                                <div class="author">
+                                    <h5>Adaeze M.</h5>
+                                    <p class="role">Freelancer · AI School Graduate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Written 2 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"I was sceptical at first, I had tried other courses before and learned nothing practical. Smart Tech was different. The Social Media Management course was hands-on, current, and I landed my first paying client before it even ended."</p>
+                                <div class="author">
+                                    <h5>Tunde O.</h5>
+                                    <p class="role">Social Media Manager · Lagos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Written 3 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"The Digital Marketing course gave me everything I needed to run ads for my own business. My sales have doubled in 3 months since applying what I learned. Worth every naira."</p>
+                                <div class="author">
+                                    <h5>Chioma E.</h5>
+                                    <p class="role">Small Business Owner · Abuja</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Written 4 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"I joined the Virtual Assistant training as a stay-at-home mum looking for remote income. Within 2 months of completing the course, I had 3 clients and was earning consistently from home."</p>
+                                <div class="author">
+                                    <h5>Fatima K.</h5>
+                                    <p class="role">Virtual Assistant · Kano</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Written 5 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"The Video Editing course is exceptional. Clear, structured, and taught with so much intention. I now edit brand videos professionally and charge what I'm worth."</p>
+                                <div class="author">
+                                    <h5>Samuel I.</h5>
+                                    <p class="role">Video Editor · Port Harcourt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Written 6 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"The Data Analysis course gave me the skills I needed to transition into tech. I now work remotely for a UK-based company, earning in dollars. Smart Tech changed my life."</p>
+                                <div class="author">
+                                    <h5>Grace E.</h5>
+                                    <p class="role">Data Analyst · Remote</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ====== END ALL TAB ====== -->
+
+            <!-- ====== VIDEO TAB ====== -->
+            <div class="tab-content" id="tab-video">
+                <div class="row g-4">
+                    <!-- Video 1 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Adaeze M.</h5>
+                                <p class="role">Freelancer · AI School Graduate</p>
+                                <p class="review-text">"The AI School completely changed how I work. I now use AI to create content, write emails, and automate client onboarding."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video 2 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Tunde O.</h5>
+                                <p class="role">Social Media Manager · Lagos</p>
+                                <p class="review-text">"I landed my first paying client before the course even ended."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video 3 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Fatima K.</h5>
+                                <p class="role">Virtual Assistant · Kano</p>
+                                <p class="review-text">"Within 2 months of completing the course, I had 3 clients and was earning consistently from home."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video 4 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Chioma E.</h5>
+                                <p class="role">Small Business Owner · Abuja</p>
+                                <p class="review-text">"My sales have doubled in 3 months since applying what I learned."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video 5 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="video-testimonial-card">
+                            <div class="video-wrapper">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="card-body">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h5>Samuel I.</h5>
+                                <p class="role">Video Editor · Port Harcourt</p>
+                                <p class="review-text">"I now edit brand videos professionally and charge what I'm worth."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Video 6 - Submit -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="video-testimonial-card" style="border: 2px dashed #1A7EB6; background: #f8faff;">
+                            <div class="card-body text-center" style="padding: 3rem 1.5rem;">
+                                <div style="font-size: 3rem; margin-bottom: 1rem;">
+                                    <i class="fas fa-video" style="color: #1A7EB6; opacity: 0.5;"></i>
+                                </div>
+                                <h5 style="color: #1A7EB6;">Your Story Here</h5>
+                                <p style="color: #999;">Share your success story with us</p>
+                                <a href="#" class="btn btn-primary rounded-pill px-4 py-2" style="background: #1A7EB6; border-color: #1A7EB6; font-size: 0.85rem;">
+                                    <i class="fas fa-plus-circle me-2"></i> Submit a Testimonial
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ====== END VIDEO TAB ====== -->
+
+            <!-- ====== WRITTEN TAB ====== -->
+            <div class="tab-content" id="tab-written">
+                <div class="row g-4">
+                    <!-- Written 1 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"The AI School completely changed how I work. I now use AI to create content, write emails, and even automate my client onboarding. I went from zero AI knowledge to offering it as a service to clients within 6 weeks."</p>
+                                <div class="author">
+                                    <h5>Adaeze M.</h5>
+                                    <p class="role">Freelancer · AI School Graduate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Written 2 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"I was sceptical at first, I had tried other courses before and learned nothing practical. Smart Tech was different. The Social Media Management course was hands-on, current, and I landed my first paying client before it even ended."</p>
+                                <div class="author">
+                                    <h5>Tunde O.</h5>
+                                    <p class="role">Social Media Manager · Lagos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Written 3 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"The Digital Marketing course gave me everything I needed to run ads for my own business. My sales have doubled in 3 months since applying what I learned. Worth every naira."</p>
+                                <div class="author">
+                                    <h5>Chioma E.</h5>
+                                    <p class="role">Small Business Owner · Abuja</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Written 4 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"I joined the Virtual Assistant training as a stay-at-home mum looking for remote income. Within 2 months of completing the course, I had 3 clients and was earning consistently from home."</p>
+                                <div class="author">
+                                    <h5>Fatima K.</h5>
+                                    <p class="role">Virtual Assistant · Kano</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Written 5 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"The Video Editing course is exceptional. Clear, structured, and taught with so much intention. I now edit brand videos professionally and charge what I'm worth."</p>
+                                <div class="author">
+                                    <h5>Samuel I.</h5>
+                                    <p class="role">Video Editor · Port Harcourt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Written 6 -->
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="written-testimonial-card">
+                            <div class="card-body">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-right"></i>
+                                </div>
+                                <div class="stars" style="color: #f59e0b; margin-bottom: 0.5rem;">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">"The Data Analysis course gave me the skills I needed to transition into tech. I now work remotely for a UK-based company, earning in dollars. Smart Tech changed my life."</p>
+                                <div class="author">
+                                    <h5>Grace E.</h5>
+                                    <p class="role">Data Analyst · Remote</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ====== END WRITTEN TAB ====== -->
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.7s">
+                <a href="#" class="btn btn-outline-primary rounded-pill px-5 py-3" style="border-color: #1A7EB6; color: #1A7EB6; font-weight: 600;">
+                    <i class="fas fa-sync me-2"></i> Load More Testimonials
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- ====== END TESTIMONIALS SECTION ====== -->
+
+    <!-- ====== STATS SECTION ====== -->
+    <div class="container-fluid py-5" style="background: #ffffff;">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div style="font-size: 2.5rem; color: #1A7EB6; font-weight: 700;">500+</div>
+                    <p style="color: #555;">People Trained</p>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div style="font-size: 2.5rem; color: #1A7EB6; font-weight: 700;">50+</div>
+                    <p style="color: #555;">Video Testimonials</p>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div style="font-size: 2.5rem; color: #1A7EB6; font-weight: 700;">4.9</div>
+                    <p style="color: #555;">Average Rating</p>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div style="font-size: 2.5rem; color: #1A7EB6; font-weight: 700;">∞</div>
+                    <p style="color: #555;">Impact Ahead</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ====== END STATS ====== -->
+
+    <!-- CTA Section -->
+    <div class="container-fluid py-5" style="background: #1A7EB6;">
+        <div class="container text-center py-4">
+            <h2 style="color: #ffffff; font-weight: 700;">Ready to Write Your Own Success Story?</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; max-width: 600px; margin: 1rem auto;">Join thousands of others who have transformed their careers with Smart Tech Solutions.</p>
+            <a href="courses.html" class="btn btn-light rounded-pill px-5 py-3" style="font-weight: 600; color: #1A7EB6;">
+                <i class="fas fa-rocket me-2"></i> Start Your Journey Today
+            </a>
+        </div>
+    </div>
+    <!-- End CTA -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
+        <div class="container pt-5 pb-4">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html">
+                        <img src="img/Pi7_Tool_image1-removebg-preview.png" alt="Company Logo" style="height: 100px; width: auto;" class="me-2">
+                    </a>
+                    <p class="mt-0 text-light">
+                        Training individuals, guiding healthcare professionals, and building the digital future of businesses with excellence, purpose, integrity and commitment.<br>
+                        'Excellence · Purpose · Integrity · Commitment'
+                    </p>
+                    <div class="d-flex hightech-link">
+                        <a href="https://www.facebook.com/share/1MxezwJJPA/" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/smarttech__st?igsh=MTdrZnNtMTl6d2czZg==" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/smart-tech-solutions-and-trainings/" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="courses.html" class="h3">Courses</a>
+                    <div class="mt-4 d-flex flex-column short-link">
+                        <a href="courses.html" class="mb-2 text-white"><i class="fas fa-angle-right me-2"></i>AI School</a>
+                        <a href="courses.html" class="mb-2 text-white"><i class="fas fa-angle-right me-2"></i>Social Media</a>
+                        <a href="courses.html" class="mb-2 text-white"><i class="fas fa-angle-right me-2"></i>Digital Marketing</a>
+                        <a href="courses.html" class="mb-2 text-white"><i class="fas fa-angle-right me-2"></i>Video Editing</a>
+                        <a href="courses.html" class="mb-2 text-white"><i class="fas fa-angle-right me-2"></i>Virtual Assistant</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="health.html" class="h3">HEALTH TECH</a>
+                    <div class="mt-4 d-flex flex-column help-link">
+                        <a href="health.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>AI for Doctors</a>
+                        <a href="health.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Health Tech Roadmap</a>
+                        <a href="health.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Impact of Tech in Healthcare</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#" class="h3">COMPANY</a>
+                    <div class="mt-4 d-flex flex-column short-link">
+                        <a href="about.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
+                        <a href="service.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                        <a href="testimonial.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Reviews</a>
+                        <a href="contact.html" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <a href="#" class="h3">Contact Us</a>
+                    <div class="text-white mt-4 d-flex flex-column contact-link">
+                        <a href="+2348167068421" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i>+234 8167068421</a>
+                        <a href="smarttechsolutions.trainings@gmail.com" class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i>smarttechsolutions.<br>trainings@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="text-light mt-5 mb-4">
+            <div class="row justify-content-center align-items-center" style="min-height: 80px;">
+                <div class="col-md-12 text-center">
+                    <span class="text-light">
+                        <a href="#" class="text-secondary" style="color: #1A7EB6 !important">
+                            <i class="fas fa-copyright me-2" style="color: #1A7EB6"></i>2025 Smart Tech Solutions &amp; Trainings
+                        </a>, All right reserved.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn-square rounded-circle back-to-top" style="background-color: #1A7EB6"><i class="fa fa-arrow-up text-white"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Tab Functionality -->
+    <script>
+        // Tab switching
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = {
+                all: document.getElementById('tab-all'),
+                video: document.getElementById('tab-video'),
+                written: document.getElementById('tab-written')
+            };
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Hide all tab contents
+                    Object.values(contents).forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show selected tab content
+                    const tabId = this.getAttribute('data-tab');
+                    if (contents[tabId]) {
+                        contents[tabId].classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2348167068421?text=Hello%21%20I%27m%20interested%20in%20your%20courses.%20Please%20help%20me%20with%20more%20information." 
+        class="whatsapp-float" 
+        target="_blank" 
+        rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | SmartTech Solutions</title>
+    <meta name="description" content="Admin Dashboard for SmartTech Solutions">
+    <link rel="icon" type="image/png" href="../img/image1.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="admin.css">
+    
+
+</head>
+
+<body>
+
+    <!-- ===== SIDEBAR OVERLAY (Mobile) ===== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            
+            
+            <img src="../img/Pi7_Tool_image1-removebg-preview.png" alt="Smart Tech Solutions" style="height: 40px; width: auto; position: fixed;">
+            <!--<h2>Smart<span>Tech</span></h2>-->
+        </div>
+
+        <nav class="sidebar-menu">
+            <div class="menu-label">Main</div>
+            <a class="menu-item active" data-section="dashboard">
+                <i class="fas fa-th-large"></i> Dashboard
+            </a>
+            <a class="menu-item" data-section="payments">
+                <i class="fas fa-credit-card"></i> Payments
+                <span class="badge">12</span>
+            </a>
+            <a class="menu-item" data-section="users">
+                <i class="fas fa-users"></i> Users
+            </a>
+
+            <div class="menu-label">Content</div>
+            <a class="menu-item" data-section="testimonials">
+                <i class="fas fa-quote-right"></i> Testimonials
+                <span class="badge success">5</span>
+            </a>
+            <a class="menu-item" data-section="projects">
+                <i class="fas fa-project-diagram"></i> Projects
+            </a>
+            <a class="menu-item" data-section="courses">
+                <i class="fas fa-graduation-cap"></i> Courses
+                <span class="badge success">8</span>
+            </a>
+            <a class="menu-item" data-section="health">
+                <i class="fas fa-heartbeat"></i> Health Tech
+                <span class="badge success">3</span>
+            </a>
+
+            <div class="menu-label">Marketing</div>
+            <a class="menu-item" data-section="newsletter">
+                <i class="fas fa-envelope"></i> Newsletter
+                <span class="badge warning">342</span>
+            </a>
+
+            <div class="menu-label">Settings</div>
+            <a class="menu-item" data-section="settings">
+                <i class="fas fa-cog"></i> Settings
+            </a>
+            <a class="menu-item" href="#" onclick="window.open('../index.html', '_blank'); return false;">
+            <i class="fas fa-external-link-alt"></i> View Site
+        </a>
+        </nav>
+    </aside>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="main-content">
+
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Admin <span>Dashboard</span></h1>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-sun sun-icon" style="color: #F59E0B;"></i>
+                    <i class="fas fa-moon moon-icon" style="color: #1A7EB6;"></i>
+                    <span id="themeLabel">Light</span>
+                </button>
+                <button class="notification-btn" title="Notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="dot"></span>
+                </button>
+                <div class="admin-profile">
+                    <div class="avatar">DB</div>
+                    <span class="name">Dr. Blessing</span>
+                    <i class="fas fa-chevron-down" style="font-size: 12px; color: var(--text-muted);"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== PAGE CONTENT ===== -->
+        <div class="page-content">
+
+            <!-- ===== DASHBOARD SECTION ===== -->
+            <div id="section-dashboard" class="section-content">
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue"><i class="fas fa-users"></i></div>
+                        <div class="stat-number">1,284</div>
+                        <div class="stat-label">Total Users</div>
+                        <div class="stat-change up"><i class="fas fa-arrow-up"></i> 12.5%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i class="fas fa-credit-card"></i></div>
+                        <div class="stat-number">₦8.4M</div>
+                        <div class="stat-label">Total Revenue</div>
+                        <div class="stat-change up"><i class="fas fa-arrow-up"></i> 18.2%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon yellow"><i class="fas fa-user-graduate"></i></div>
+                        <div class="stat-number">523</div>
+                        <div class="stat-label">Students Enrolled</div>
+                        <div class="stat-change up"><i class="fas fa-arrow-up"></i> 8.7%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple"><i class="fas fa-file-alt"></i></div>
+                        <div class="stat-number">47</div>
+                        <div class="stat-label">Testimonials</div>
+                        <div class="stat-change up"><i class="fas fa-arrow-up"></i> 5.3%</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon red"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Pending Reviews</div>
+                        <div class="stat-change down"><i class="fas fa-arrow-down"></i> 2</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon teal"><i class="fas fa-envelope"></i></div>
+                        <div class="stat-number">342</div>
+                        <div class="stat-label">Newsletter Subs</div>
+                        <div class="stat-change up"><i class="fas fa-arrow-up"></i> 24%</div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3 style="font-size: 16px; font-weight: 700; color: var(--text-primary);">Recent Activity</h3>
+                        <span style="font-size: 13px; color: var(--text-muted);">Last 7 days</span>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Action</th>
+                                <th>Course</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Adaeze M.</strong></td>
+                                <td>Enrolled</td>
+                                <td>AI School</td>
+                                <td><span class="status-badge paid">Completed</span></td>
+                                <td>2 hours ago</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tunde O.</strong></td>
+                                <td>Payment</td>
+                                <td>Digital Marketing</td>
+                                <td><span class="status-badge paid">Paid</span></td>
+                                <td>5 hours ago</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fatima K.</strong></td>
+                                <td>Submitted</td>
+                                <td>Testimonial</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>Yesterday</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== PAYMENTS SECTION ===== -->
+            <div id="section-payments" class="section-content" style="display: none;">
+                <div class="section-header">
+                    <h2>Payments</h2>
+                    <button class="btn-add" onclick="openModal('paymentModal')">
+                        <i class="fas fa-plus"></i> Add Payment
+                    </button>
+                </div>
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search payments...">
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>User</th>
+                                <th>Course</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="paymentsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== TESTIMONIALS SECTION ===== -->
+            <div id="section-testimonials" class="section-content" style="display: none;">
+                <div class="section-header">
+                    <h2>Testimonials</h2>
+                    <button class="btn-add" onclick="openModal('testimonialModal')">
+                        <i class="fas fa-plus"></i> Add Testimonial
+                    </button>
+                </div>
+                <div class="admin-tabs">
+                    <button class="tab-btn active" data-tab="testimonials-all"><i class="fas fa-list"></i> <span>All</span></button>
+                    <button class="tab-btn" data-tab="testimonials-video"><i class="fas fa-video"></i> <span>Video</span></button>
+                    <button class="tab-btn" data-tab="testimonials-written"><i class="fas fa-quote-left"></i> <span>Written</span></button>
+                </div>
+                <div class="tab-content active" id="testimonials-all">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Content</th>
+                                    <th>Rating</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="testimonialsTableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== PROJECTS SECTION ===== -->
+            <div id="section-projects" class="section-content" style="display: none;">
+                <div class="section-header">
+                    <h2>Projects</h2>
+                    <button class="btn-add" onclick="openModal('projectModal')">
+                        <i class="fas fa-plus"></i> Add Project
+                    </button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="projectsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== COURSES SECTION ===== -->
+            <div id="section-courses" class="section-content" style="display: none;">
+                <div class="section-header">
+                    <h2>Courses</h2>
+                    <button class="btn-add" onclick="openModal('courseModal')">
+                        <i class="fas fa-plus"></i> Add Course
+                    </button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Course</th>
+                                <th>Price</th>
+                                <th>Features</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="coursesTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== HEALTH TECH SECTION ===== -->
+            <div id="section-health" class="section-content" style="display: none;">
+                <div class="section-header">
+                    <h2>Health Tech Courses</h2>
+                    <button class="btn-add" onclick="openModal('healthModal')">
+                        <i class="fas fa-plus"></i> Add Health Course
+                    </button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Features</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="healthTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== NEWSLETTER SECTION ===== -->
+            <div id="section-newsletter" class="section-content" style="display: none;">
+                <div class="section-header">
+                    <h2>Newsletter Subscribers</h2>
+                    <button class="btn-add" onclick="openModal('newsletterModal')">
+                        <i class="fas fa-plus"></i> Add Subscriber
+                    </button>
+                </div>
+                <div class="table-container">
+                    <div class="table-header">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search subscribers...">
+                        </div>
+                        <button class="btn-add" style="background: var(--success);" onclick="showToast('Newsletter sent to all subscribers!', 'success')">
+                            <i class="fas fa-paper-plane"></i> Send to All
+                        </button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Email</th>
+                                <th>Subscribed Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="newsletterTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== SETTINGS SECTION ===== -->
+            <div id="section-settings" class="section-content" style="display: none;">
+                <div class="section-header">
+                    <h2>Settings</h2>
+                </div>
+                <div style="display: grid; gap: 24px; max-width: 800px;">
+                    <div class="table-container" style="padding: 24px;">
+                        <h3 style="margin-bottom: 16px; color: var(--text-primary);">General Settings</h3>
+                        <div class="form-group">
+                            <label style="color: var(--text-secondary);">Site Name</label>
+                            <input type="text" value="Smart Tech Solutions & Trainings" style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 10px; font-family: inherit; background: var(--bg-input); color: var(--text-primary);">
+                        </div>
+                        <div class="form-group">
+                            <label style="color: var(--text-secondary);">Admin Email</label>
+                            <input type="email" value="smarttechsolutions.trainings@gmail.com" style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 10px; font-family: inherit; background: var(--bg-input); color: var(--text-primary);">
+                        </div>
+                        <button class="btn-add" onclick="showToast('Settings saved successfully!', 'success')">
+                            <i class="fas fa-save"></i> Save Settings
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== MODALS ===== -->
+    <!-- Testimonial Modal -->
+    <div class="modal-overlay" id="testimonialModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-quote-right" style="color: var(--primary);"></i> Add Testimonial</h3>
+                <button class="close-modal" onclick="closeModal('testimonialModal')">&times;</button>
+            </div>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" placeholder="e.g., Adaeze M." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Role/Title</label>
+                        <input type="text" placeholder="e.g., AI School Graduate">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Type <span class="required">*</span></label>
+                    <select required>
+                        <option value="">Select Type</option>
+                        <option value="video">Video</option>
+                        <option value="written">Written</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Review Text <span class="required">*</span></label>
+                    <textarea placeholder="Write the testimonial content..." required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <select>
+                            <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+                            <option value="4">⭐⭐⭐⭐ (4)</option>
+                            <option value="3">⭐⭐⭐ (3)</option>
+                            <option value="2">⭐⭐ (2)</option>
+                            <option value="1">⭐ (1)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="published">Published</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal('testimonialModal')">Cancel</button>
+                    <button type="submit" class="btn-submit" onclick="showToast('Testimonial added successfully!', 'success'); closeModal('testimonialModal')">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Course Modal -->
+    <div class="modal-overlay" id="courseModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-graduation-cap" style="color: var(--primary);"></i> Add Course</h3>
+                <button class="close-modal" onclick="closeModal('courseModal')">&times;</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label>Course Name <span class="required">*</span></label>
+                    <input type="text" placeholder="e.g., AI School" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Price (USD) <span class="required">*</span></label>
+                        <input type="number" placeholder="e.g., 35" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select>
+                            <option value="technology">Technology</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="business">Business</option>
+                            <option value="design">Design</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Course description..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Features (comma separated)</label>
+                    <input type="text" placeholder="Feature 1, Feature 2, Feature 3">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal('courseModal')">Cancel</button>
+                    <button type="submit" class="btn-submit" onclick="showToast('Course added successfully!', 'success'); closeModal('courseModal')">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Health Modal -->
+    <div class="modal-overlay" id="healthModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-heartbeat" style="color: var(--primary);"></i> Add Health Tech Course</h3>
+                <button class="close-modal" onclick="closeModal('healthModal')">&times;</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label>Course Name <span class="required">*</span></label>
+                    <input type="text" placeholder="e.g., Healthcare Data Analysis" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category <span class="required">*</span></label>
+                        <select required>
+                            <option value="">Select Category</option>
+                            <option value="AI for Doctors">AI for Doctors</option>
+                            <option value="Most Popular">Most Popular</option>
+                            <option value="Healthcare Insight">Healthcare Insight</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Price (USD) <span class="required">*</span></label>
+                        <input type="number" placeholder="e.g., 35" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Course description..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Features (comma separated)</label>
+                    <input type="text" placeholder="Feature 1, Feature 2, Feature 3">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal('healthModal')">Cancel</button>
+                    <button type="submit" class="btn-submit" onclick="showToast('Health course added successfully!', 'success'); closeModal('healthModal')">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal-overlay" id="paymentModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-credit-card" style="color: var(--primary);"></i> Add Payment</h3>
+                <button class="close-modal" onclick="closeModal('paymentModal')">&times;</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label>User <span class="required">*</span></label>
+                    <input type="text" placeholder="e.g., Adaeze M." required>
+                </div>
+                <div class="form-group">
+                    <label>Course <span class="required">*</span></label>
+                    <select required>
+                        <option value="">Select Course</option>
+                        <option value="AI School">AI School</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Virtual Assistant">Virtual Assistant</option>
+                        <option value="Healthcare Data Analysis">Healthcare Data Analysis</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Amount <span class="required">*</span></label>
+                        <input type="number" placeholder="e.g., 85000" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="paid">Paid</option>
+                            <option value="pending">Pending</option>
+                            <option value="failed">Failed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal('paymentModal')">Cancel</button>
+                    <button type="submit" class="btn-submit" onclick="showToast('Payment recorded successfully!', 'success'); closeModal('paymentModal')">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-project-diagram" style="color: var(--primary);"></i> Add Project</h3>
+                <button class="close-modal" onclick="closeModal('projectModal')">&times;</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label>Project Name <span class="required">*</span></label>
+                    <input type="text" placeholder="e.g., Smart Tech Academy" required>
+                </div>
+                <div class="form-group">
+                    <label>Category <span class="required">*</span></label>
+                    <select required>
+                        <option value="">Select Category</option>
+                        <option value="education">Education</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="active">Active</option>
+                            <option value="ongoing">Ongoing</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal('projectModal')">Cancel</button>
+                    <button type="submit" class="btn-submit" onclick="showToast('Project added successfully!', 'success'); closeModal('projectModal')">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Newsletter Modal -->
+    <div class="modal-overlay" id="newsletterModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3><i class="fas fa-envelope" style="color: var(--primary);"></i> Add Subscriber</h3>
+                <button class="close-modal" onclick="closeModal('newsletterModal')">&times;</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label>Email Address <span class="required">*</span></label>
+                    <input type="email" placeholder="example@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select>
+                        <option value="active">Active</option>
+                        <option value="unsubscribed">Unsubscribed</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" onclick="closeModal('newsletterModal')">Cancel</button>
+                    <button type="submit" class="btn-submit" onclick="showToast('Subscriber added successfully!', 'success'); closeModal('newsletterModal')">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== TOAST ===== -->
+    <div class="toast-notification" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Success!</span>
+    </div>
+
+    <script src="admin.js"></script>
+   
+</body>
+</html>
